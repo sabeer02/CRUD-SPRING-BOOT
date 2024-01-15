@@ -1,0 +1,23 @@
+package com.employee.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.employee.model.Employee;
+import com.employee.repo.EmployeeRepository;
+import com.employee.service.EmployeeService;
+
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	public EmployeeRepository employeeRepository;
+	
+	@Override
+	public List<Employee> getAllEmployees() {
+		return employeeRepository.findAll();
+	}
+
+}

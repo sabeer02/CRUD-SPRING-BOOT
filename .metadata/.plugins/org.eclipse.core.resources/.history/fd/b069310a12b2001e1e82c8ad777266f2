@@ -1,0 +1,19 @@
+package com.employee.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.employee.service.EmployeeService;
+
+@RestController
+public class EmployeeController {
+
+	private EmployeeService employeeService;
+	//display list of employees
+	@GetMapping("/")
+	public String viewHomePage(Model model) {
+		model.addAttribute("List", employeeService.getAllEmployees());
+		return "index";
+	}
+}
