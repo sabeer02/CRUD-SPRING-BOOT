@@ -27,7 +27,7 @@ To run this application locally, follow these steps:
 1. Clone the repository (if you haven't done so already):
 
 ```bash
-git clone https://github.com/your-username/employee-management.git
+git clone https://github.com/sabeer02/CRUD-SPRING-BOOT.git
 ```
 
 2. Navigate to the project directory:
